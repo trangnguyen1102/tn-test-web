@@ -6,24 +6,26 @@
   <script src="script.js"></script>
 </head>
 <body>
-  <h1>Hello from GitHub Pages</h1>
-  <p>This page is used for testing Web Embed and Web Modal integration.</p>
-
-  <!-- Embed Target Element -->
-  <div id="web-embed-target" style="border:1px solid #ccc; padding:20px; margin-top:20px;">
-    Embed will appear here.
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="news.html">News</a>
+    <a href="about.html">About</a>
   </div>
 
-  <!-- Trigger Modal Button -->
-  <button id="show-modal-btn" style="margin-top:20px;">Show Modal</button>
+  <div class="container">
+    <h1>Welcome to the Home Page</h1>
+    <p>This is a demo site for testing Web Embed and Web Modal features.</p>
 
-  <!-- Modal Placeholder -->
-  <div id="web-modal" style="display:none; position:fixed; top:20%; left:30%; width:40%; background:#fff; padding:20px; border:2px solid #000; z-index:1000;">
-    <h2>Web Modal Content</h2>
-    <p>This modal is loaded via JS.</p>
-    <button onclick="document.getElementById('web-modal').style.display='none';">Close</button>
+    <div id="web-embed-target" class="embed-box">
+      <p><em>Web Embed loads here...</em></p>
+    </div>
+
+    <button class="modal-button" onclick="document.getElementById('modal').style.display='block'">Open Modal</button>
+    <div class="modal" id="modal">
+      <h2>Modal Content</h2>
+      <p>This is a test modal.</p>
+      <button onclick="document.getElementById('modal').style.display='none'">Close</button>
+    </div>
   </div>
-
-  <script src="embed.js"></script>
 </body>
 </html>
